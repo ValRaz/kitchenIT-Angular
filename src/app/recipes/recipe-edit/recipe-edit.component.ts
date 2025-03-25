@@ -90,14 +90,15 @@ export class RecipeEditComponent {
                 Validators.pattern(/^(?:[1-9]\d*(?:\.\d+)?|0\.\d*[1-9]\d*)$/)
               ])
             })
-          );
+          )
         }
       }
     }
+
     this.recipeForm = new FormGroup({
       'name': new FormControl(recipeName, Validators.required),
-      'imagePath': new FormControl(recipeImagePath, Validators.required),
-      'description': new FormControl(recipeDescription, Validators.required),
+      'imagePath': new FormControl(recipeImagePath,Validators.required),
+      'description': new FormControl(recipeDescription,Validators.required),
       'ingredients': recipeIngredients
     });
   }
